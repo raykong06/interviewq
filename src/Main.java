@@ -26,6 +26,7 @@ public class Main {
         ArrayList[] arr = new ArrayList[numLines];
 
         int numbers = 0;
+        /*
         for (int i = 0; i < editInput.substring(0, editInput.indexOf("\n")).length(); i++)
         {
             if (editInput.substring(i, i + 1).equals(" "))
@@ -33,18 +34,19 @@ public class Main {
                 numbers++;
             }
         }
+
+         */
         System.out.println(editInput);
 
         for (int i = 0; i < numLines; i++)
         {
             ArrayList<Integer> intArr = new ArrayList<Integer>();
+            numbers = Integer.parseInt(editInput.substring(0, editInput.indexOf(" ")));
+            editInput = editInput.substring(editInput.indexOf(" ") + 1);
             for (int num = 0; num < numbers; num++)
             {
-                if (num == 0)
-                {
-                    editInput = editInput.substring(editInput.indexOf(" ") + 1);
-                }
-                else if (num < numbers - 1)
+
+                if (num < numbers - 1)
                 {
                     intArr.add(Integer.parseInt(editInput.substring(0, editInput.indexOf(" "))));
                     editInput = editInput.substring(editInput.indexOf(" ") + 1);
